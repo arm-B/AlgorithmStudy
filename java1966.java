@@ -1,7 +1,6 @@
 import java.util.*;
 import java.io.*;
 public class java1966 {
-	
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		StringBuilder sb = new StringBuilder();
@@ -24,13 +23,13 @@ public class java1966 {
 
 			while(!q.isEmpty()) {
 				int[] front = q.peek();
-				boolean sgnf = true; //ÀÏ´Ü Á¦ÀÏ Å¬ °ÍÀÌ¶ó °¡Á¤
+				boolean sgnf = true; //ì¼ë‹¨ ì œì¼ í´ ê²ƒì´ë¼ ê°€ì •
 				
 				for(int j=0; j<q.size();j++) {
 					if(front[1] < q.get(j)[1]) {
 						for(int k=0; k < j ; k++)
 							q.offer(q.remove());
-						sgnf = false;	//Å¥ ³»ºÎ¸¦ µ¹¸é¼­ ´õ Å« ³ğÀÌ ÀÖÀ¸¸é Ãâ·Â ¸øÇÏ°Ô ¸·´Â´Ù
+						sgnf = false;	//í ë‚´ë¶€ë¥¼ ëŒë©´ì„œ ë” í° ë†ˆì´ ìˆìœ¼ë©´ ì¶œë ¥ ëª»í•˜ê²Œ ë§‰ëŠ”ë‹¤
 						break;
 					}
 				}
@@ -42,12 +41,8 @@ public class java1966 {
 						sb.append(count+"\n");
 						break;
 					}
-				}
-				
-			}
-			
-			
-			
+				}	
+			}		
 		}
 		System.out.println(sb);
 	}
