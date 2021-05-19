@@ -12,7 +12,7 @@ class Solution {
 		position.add('0');
 	}
 	answer = 0;
-        countCase(0, n, data);
+        countCase(0, data);
         return answer;
     }
     
