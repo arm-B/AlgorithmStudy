@@ -1,7 +1,7 @@
 import java.util.*;
 class Solution {
   public int[] solution(int[] progresses, int[] speeds) {
-		List<Integer> temp = new ArrayList<Integer>();
+    List<Integer> temp = new ArrayList<Integer>();
     int completes[] = new int[progresses.length];
     int max = 0, index=-1;
     
