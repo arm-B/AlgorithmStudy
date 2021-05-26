@@ -15,8 +15,8 @@ class Solution {
         max = completes[i];
         index++;
       }
-			else
-				temp.set(index, temp.get(index)+1);
+      else
+        temp.set(index, temp.get(index)+1);
     }
     
     int cnt = 0; 
