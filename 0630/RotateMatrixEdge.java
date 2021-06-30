@@ -35,7 +35,7 @@ class Solution {
         if(min > Rmatrix[top][j]) min= Rmatrix[top][j];
       }
       
-			Rmatrix[top][left+1] = tmp;
+      Rmatrix[top][left+1] = tmp;
       answer[index++] = min;
     }
     return answer;
