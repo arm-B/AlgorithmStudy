@@ -18,11 +18,9 @@ class Solution {
     }
     
     String[] answer = new String[list.size()];
-    
-		for(int i = 0; i<answer.length;i++) {
-      StringBuilder sb = new StringBuilder();
+    for(int i = 0; i<answer.length;i++)
       answer[i] = map.get(list.get(i)[0])+list.get(i)[1];
-    }
+      
     return answer;
   }
 }
