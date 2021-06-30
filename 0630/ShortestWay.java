@@ -2,7 +2,7 @@ import java.util.*;
 class Solution {
   //앞으로 갈 방향 위, 오른쪽, 아래, 왼쪽
   static int[] dx = {0, 1, 0, -1};
-	static int[] dy = {-1, 0, 1, 0};
+  static int[] dy = {-1, 0, 1, 0};
   static boolean[][] visited;
   static int n;
   static int m;
@@ -35,8 +35,8 @@ class Solution {
           }
         }
       }   
-    }   
-		return -1;
+    }
+    return -1;
   }
   
   static public class Node{
