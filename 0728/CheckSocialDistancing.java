@@ -103,25 +103,25 @@ class Solution {
       if(places[room][row].charAt(col+2) == 'P')
         if(places[room][row].charAt(col+1) !='X')
           return false;
-    }
+    } 
     
     // P
     // P 이면 ㅂㅂ
     if(row+1 <5) {
-			if(places[room][row+1].charAt(col) =='P')
-				return false;
-		}
+      if(places[room][row+1].charAt(col) =='P')
+        return false;
+    }
     
     // P           P
     // X           O
     // P 가 아니라 P 같은 거면 ㅂㅂ
-		if(row+2 <5) {
-			if(places[room][row+2].charAt(col) == 'P')
-				if(places[room][row+1].charAt(col) !='X')
-				return false;
-		}
+    if(row+2 <5) {
+      if(places[room][row+2].charAt(col) == 'P')
+        if(places[room][row+1].charAt(col) !='X')
+          return false;
+    }  
     
     //위의 검증을 다 통과해야만 true를 가지고 가서 answer의 값을 1로 유지할 수 있음
-		return true;
-	}
+    return true;
+  }
 }
