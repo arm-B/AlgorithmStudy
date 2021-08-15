@@ -16,8 +16,8 @@ class Solution {
       else if(score.get(score.size()-1) == scores[i][i] && score.get(score.size()-1) != score.get(score.size()-2)) {
         score.remove(score.size()-1);
       }
-      answer.append(checkGrade(score));				
-		}
+      answer.append(checkGrade(score));		
+    }
     return answer.toString();
   }
   
