@@ -7,13 +7,15 @@ public class Main {
     for(int i = 0; i<place; i++)
       taker[i] = sc.nextInt();
     int mainS = sc.nextInt(), subS = sc.nextInt();
-		
+    
     long answer = Long.valueOf(place);
     for(int i = 0; i<place; i++) {
-      taker[i] -= mainS; 
-      answer += Long.valueOf(taker[i]/subS);
-      if(taker[i]%subS != 0)
-        answer++;
+      if(mainS<taker[i]) {
+        taker[i] -= mainS; 
+        answer += Long.valueOf(taker[i]/subS);
+        if(taker[i]%subS != 0)
+          answer++;
+      }
     }
     System.out.println(answer);
     sc.close();
