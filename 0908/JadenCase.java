@@ -11,7 +11,7 @@ class Solution {
       }
       
       if(isFE) {
-        if(s.charAt(i)>='a' && s.charAt(i)<='z' || s.charAt(i)>='A' && s.charAt(i)<='Z')
+        if(s.charAt(i)>='a' && s.charAt(i)<='z')
           sb.append(Character.toString(s.charAt(i)).toUpperCase());
         else
           sb.append(s.charAt(i));
