@@ -11,15 +11,11 @@ class Solution {
       }
       
       if(isFE) {
-        if(s.charAt(i)>='a' && s.charAt(i)<='z')
-          sb.append(Character.toString(s.charAt(i)).toUpperCase());
-        else
-          sb.append(s.charAt(i));
+        sb.append(Character.toString(s.charAt(i)).toUpperCase());
         isFE = false;
       }
-      else {
+      else
         sb.append(Character.toString(s.charAt(i)).toLowerCase());
-      }
     }
     return sb.toString();
   }
