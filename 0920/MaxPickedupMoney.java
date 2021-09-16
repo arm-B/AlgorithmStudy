@@ -37,3 +37,6 @@ class Main {
 		System.out.println(ans);
 	}		
 }
+
+// ..
+// 이퍼에 dp 문제 나오면 못 풀 거 같아요
