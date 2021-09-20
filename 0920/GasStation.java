@@ -7,10 +7,10 @@ public class Main{
     int cost[] = new int[cities];
     long totalCost = 0;
     for(int i = 0; i<dist.length; i++) dist[i] = sc.nextInt();
-		for(int i = 0; i<cost.length; i++) cost[i] = sc.nextInt();
-		
-		//그냥 지나가다가 싼 데 있으면 거기서 다 충전혀...
-
+    for(int i = 0; i<cost.length; i++) cost[i] = sc.nextInt();
+    
+    //그냥 지나가다가 싼 데 있으면 거기서 다 충전혀...
+    
     long minCost = cost[0];
     for(int i = 0; i<cities-1; i++) {
       if(cost[i] < minCost)
