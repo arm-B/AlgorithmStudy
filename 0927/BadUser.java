@@ -6,23 +6,25 @@ class Solution {
       String ban = banned_id[i];
       for(int j = 0; j<user_id.length; j++){
         boolean isSame = true;
-        if(user_id[j].length() != ban.length())                    continue;
-                else {
-                    for(int k = 0; k<user_id[j].length(); k++){
-                        if(ban.charAt(k) != '*')
-                            if(user_id[j].charAt(k) != ban.charAt(k)){
-                                isSame = false;
-                                break;
-                            }
-                    }
-                }
-                if(isSame) cand++;                
-            }
-            if(cand>=1) answer *= cand;
-            else answer *= 1;
-        } 
-        return answer;
-    }
+        if(user_id[j].length() != ban.length())
+          continue;
+        else {
+          for(int k = 0; k<user_id[j].length(); k++){
+            if(ban.charAt(k) != '*')
+              if(user_id[j].charAt(k) != ban.charAt(k)){
+                isSame = false;
+                break;
+              }
+          }
+        }
+        if(isSame) cand++;  
+        
+      }
+      if(cand>=1) answer *= cand;
+      else answer *= 1;
+    } 
+    return answer;
+  }
 }
 
 // ㅏ 겹치는 경우 생각 안하고 짜버림
