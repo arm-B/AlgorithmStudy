@@ -2,16 +2,15 @@ import java.util.*;
 class Main {
   static int answer, N;
   static int colQueen[]; // n번재 행 몇번째 열에 queen이 있는지
-  static int xy[][];
+  static int xy[][];     // 절대 못 가는조건
   public static int solution(int n, int k, int[] X, int[] Y) {
     colQueen = new int[n+1];
-    xy = new int[n+1][n+1];
+    xy = new int[n][n];
     N = n;
     
-    for(int i=0; i<k; i++) {
-      // 여기서 또 의문. 둘다 1<=x,y~ 인데 왜 X것만 -1해줘도 돌아갈까
-      xy[X[i]-1][Y[i]] = 1;
-    }
+    // 못 가는 곳은 1
+    for(int i=0; i<k; i++)
+      xy[X[i]-1][Y[i]-1] = 1;
     queen(0);
     return answer;
   }
@@ -29,12 +28,10 @@ class Main {
       //  X  X  X  X  X
       //  X  X  Q  X  X
       // 이렇게 될 거 아녀... 이러면 가면 안 돼 그래서 플래그 내림
-      if(colQueen[i] == colQueen[k] || Math.abs(colQueen[i]-colQueen[k]) == i-k) {
+      if(colQueen[i] == colQueen[k] || Math.abs(colQueen[i]-colQueen[k]) == i-k)
         flag = false;
-      }
       k++;
     }
-    
     return flag;
   }
 	
@@ -44,8 +41,8 @@ class Main {
     if(isOkay(i)) {
       if(i == N)
         answer++;
-      else {
-        for(j=1; j<=N; j++) {
+      else {  // 앞 행에 둔 게 조건 만족하는지 확인
+        for(j=0; j<N; j++) {
           if(xy[i][j] == 1) continue;
           colQueen[i+1] = j;
           queen(i+1);
@@ -61,17 +58,14 @@ class Main {
     int k = sc.nextInt();
     
     int X[] = new int[k];
-    for(int i=0; i<k; i++){
+    for(int i=0; i<k; i++)
       X[i] = sc.nextInt();
-    }
     
     int Y[] = new int[k];
-    for(int i=0; i<k; i++){
+    for(int i=0; i<k; i++)
       Y[i] = sc.nextInt();
-    }
     
-    System.out.println(solution(n, k, X, Y));
-    
+    System.out.println(solution(n, k, X, Y));  
   }
 }
 
